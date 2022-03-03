@@ -2,7 +2,6 @@ package com.company;
 
 public class Player extends Board{
 
-    private Object player1;
 
     public Player(String name, int money , int space) {
         //Constructor
@@ -31,7 +30,7 @@ public class Player extends Board{
             return playerName;
         }
         if(playerx == 2){
-            String playerName = player2;
+            String playerName = Player player1;
             return playerName;
         }if(playerx == 3){
             String playerName = player3;
