@@ -1,42 +1,20 @@
 package com.company;
+import java.util.ArrayList;
 
-public class Player extends Board{
+public class Player extends BoardCharacter {
+    String player1;
+    String player2;
+    String player3;
+    ArrayList<String> player = new ArrayList<>();
 
+    public void Player(){
 
-    public Player(String name, int money , int space) {
-        //Constructor
-        String name1 = name;
-        
-        int money1 = money;
-        int space1 = space;
-        //
     }
-    public static void Player(){
-        Player player1 = new Player("*", 1, 1);
-        Player player2 = new Player("/", 19, 6);
-        Player player3 = new Player("/", 19, 6);
-
-        Board board = new Board();
-        System.out.println("Ur mum");
-        System.out.println(board.test);
-    }
-    public void inputPlayerName(String nameInput){
-
+    public void inputPlayerName(String name, int playerx){
+        player.add("name");
     }
     public String getPlayerName(int playerx){
-        String err = "Player does not exist";
-        if(playerx == 1){
-            String playerName = Player player1;
-            return playerName;
-        }
-        if(playerx == 2){
-            String playerName = Player player1;
-            return playerName;
-        }if(playerx == 3){
-            String playerName = player3;
-            return playerName;
-        }
-        return err;
+        return player1;
+    }
 
-        }
 }
