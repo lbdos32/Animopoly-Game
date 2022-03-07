@@ -17,3 +17,5 @@ Animopoly
 ## Branch
 
 Each developer push to their own branch 
+
+joe
