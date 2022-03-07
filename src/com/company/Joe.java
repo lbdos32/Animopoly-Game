@@ -3,7 +3,7 @@ package com.company;
 public class Joe {
     public static void Animals() {
         int buyPlace;
-        double why = 1.5;
+        int Place;
         int player1 = 1;
         int player2 = 2;
         int player3 = 3;
@@ -71,7 +71,16 @@ public class Joe {
             AnimalsArray[10][o] = (AnimalsArray[5][o]/2 + AnimalsArray[5][o]);
             o = o + 1;
         }
-        System.out.println(AnimalsArray[2][5]);
+        int j = 1;
+        while(j<26) {
+            AnimalsArray[9][j] = (AnimalsArray[4][j]/2 + AnimalsArray[4][j]);
+            j = j + 1;
+        }
+        int b = 1;
+        while(b<26) {
+            AnimalsArray[8][b] = (AnimalsArray[3][b]/2 + AnimalsArray[3][b]);
+            b = b + 1;
+        }
     }
     public static void main(String[] args) {
         Animals();
