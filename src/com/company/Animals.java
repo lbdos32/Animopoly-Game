@@ -1,6 +1,6 @@
 package com.company;
 
-public class Joe {
+public class Animals {
     public static void Animals() {
         int buyPlace;
         double why = 1.5;
