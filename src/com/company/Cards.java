@@ -4,155 +4,96 @@ import java.util.Random;
 
 public class Cards {
 
-    private String[] Cards = {
-            "Advance to go.",
-            "a terrorist just blew up your zoo ,lose 500 for repair",
-            "it is a nice and sunny day ,do nothing",
-            "bill gates loves you and wants to invest ,gain 300",
-            "you have a new collab with macdonalds ,gain 270",
-            "you got robbed on the street.lose 400",
-            "you have been granted a country for your kindness,gain 550",
-            "you have to pay for your honeymoon.lose 150",
-            "a meteor is coming and you had to purchase top of the line defense,lose 350",
-            "Someone killed most of your animals ,lose 500",
-            "tax time ,lose 50",
-            "money fell from the sky ,gain 25",
-            "speeding fine,lose 50",
-            "you inherit your parents will,gain 100",
-            "some of your rivals magically got gunned down,gain 200",
-            "you organize a huge bake sale,gain 30",
-            "you have been asked to go to multiple interviews ,collect 400",
-            "its your birthday,gain 100",
-            "you found a random goldbar,gain 250",
-            "time to pay for your kid tuition ,loose 300",
-            "you meet a alien and he gives you his planet blessing,gain 550"};
+    private int playerBalance;
+
+    public Cards() {
+
+    }
+
+    public int drawCard() {
+        Random rand = new Random();
+        int upperBound = 19;
+        int lowerBound = 0;
+        //generate random values from 1-6
+        int card = rand.nextInt(upperBound - lowerBound) + lowerBound;
+        switch (card) {
+            case 0:
+                System.out.println("a terrorist just blew up your zoo ,lose 500 for repair");
+                return -500;
+            case 1:
+                System.out.println("it is a nice and sunny day ,do nothing");
+                break;
+            case 2:
+                System.out.println("bill gates loves you and wants to invest ,gain 300");
+                return 300;
+
+            case 3:
+                System.out.println("you have a new collab with macdonalds ,gain 270");
+                return 270;
+            case 4:
+                System.out.println("you got robbed on the street.lose 400");
+                return 400;
+
+            case 5:
+                System.out.println("you have been granted a country for your kindness,gain 550");
+                return 550;
+
+            case 6:
+                System.out.println("you have to pay for your honeymoon.lose 150");
+                return -150;
+
+            case 7:
+                System.out.println("a meteor is coming and you had to purchase top of the line defense,lose 350");
+                return -350;
+            case 8:
+                System.out.println("Someone killed most of your animals ,lose 500");
+                return -500;
+            case 9:
+                System.out.println("tax time ,lose 50");
+                return -50;
+
+            case 10:
+                System.out.println("money fell from the sky ,gain 25");
+                return 25;
+
+            case 11:
+                System.out.println("speeding fine,lose 50");
+                return -50;
+
+            case 12:
+                System.out.println("you inherit your parents will, gain 100");
+                return 100;
+
+            case 13:
+                System.out.println("some of your rivals magically got gunned down,gain 200");
+                return 200;
+
+            case 14:
+                System.out.println("you organize a huge bake sale,gain 30");
+                return 30;
 
 
-    public class Card {
-        private int playerBalance;
+            case 15:
+                System.out.println("you have been asked to go to multiple interviews ,collect 400");
+                return 400;
+            case 16:
+                System.out.println("its your birthday,gain 100");
+                return 400;
 
-        public Card() {
-            this.playerBalance = playerBalance;
+            case 17:
+                System.out.println("you found a random goldbar,gain 250");
+                return 250;
+
+            case 18:
+                System.out.println("time to pay for your kid tuition ,lose 300");
+                return -300;
+
+            case 19:
+                System.out.println("you meet a alien and he gives you his planet blessing, gain 550");
+                return 550;
+
+
         }
-
-        public int getPlayerBalance(){
-            return playerBalance;
-        }
-
-        public void updatePlayerBalance(int playerBalance){
-            this.playerBalance = this.playerBalance + playerBalance;
-        }
-
-
-
-        public String drawCard() {
-            int number;
-            Random Generate = new Random();
-            number = Generate.nextInt((Cards.length - 1) - 0 + 0) + 0;
-            return Cards[number];
-        }
-
-        public void processCard(Card player, String cardInstruction) {
-            System.out.println(cardInstruction);
-            switch (cardInstruction) {
-                case "a terrorist just blew up your zoo ,lose 500 for repair":
-                    player.updatePlayerBalance(-500);
-                    break;
-
-                case "it is a nice and sunny day ,do nothing":
-                    System.out.println("you got nothing");
-                    break;
-                case "bill gates loves you and wants to invest ,gain 300":
-                    player.updatePlayerBalance(+300);
-                    break;
-
-                case "you have a new collab with macdonalds ,gain 270":
-                    player.updatePlayerBalance(+270);
-                    break;
-
-                case "you got robbed on the street.lose 400":
-                    player.updatePlayerBalance(-400);
-                    break;
-
-                case "you have been granted a country for your kindness,gain 550":
-                    player.updatePlayerBalance(+550);
-                    break;
-
-                case "you have to pay for your honeymoon.lose 150":
-                    player.updatePlayerBalance(-150);
-                    break;
-
-                case "a meteor is coming and you had to purchase top of the line defense,lose 350":
-                    player.updatePlayerBalance(-350);
-                    break;
-                case "Someone killed most of your animals ,lose 500":
-                    player.updatePlayerBalance(-500);
-                    break;
-
-                case "tax time ,lose 50":
-                    player.updatePlayerBalance(-50);
-                    break;
-
-                case "money fell from the sky ,gain 25":
-                    player.updatePlayerBalance(+25);
-                    break;
-
-                case "speeding fine,lose 50":
-                    player.updatePlayerBalance(-50);
-                    break;
-
-                case "you inherit your parents will,gain 100":
-                    player.updatePlayerBalance(+100);
-                    break;
-
-                case "some of your rivals magically got gunned down,gain 200":
-                    player.updatePlayerBalance(+200);
-                    break;
-
-                case "you organize a huge bake sale,gain 30":
-                    player.updatePlayerBalance(+30);
-                    break;
-
-
-                case "you have been asked to go to multiple interviews ,collect 400":
-                    player.updatePlayerBalance(+400);
-                    break;
-
-
-                case "its your birthday,gain 100":
-                    player.updatePlayerBalance(+100);
-                    break;
-
-                case "you found a random goldbar,gain 250":
-                    player.updatePlayerBalance(+250);
-                    break;
-
-                case "time to pay for your kid tuition ,lose 300":
-                    player.updatePlayerBalance(-300);
-                    break;
-
-                case "you meet a alien and he gives you his planet blessing,gain 550":
-                    player.updatePlayerBalance(+500);
-                    break;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            }
-        }
+        return 0;
     }
 }
